@@ -1,0 +1,203 @@
+{
+  "content": {
+    "title": "Albums",
+    "albums": [
+      {
+        "id": 1,
+        "title": "Summer Colors",
+        "slug": "summer-colors",
+        "coverImg": "https://i.ibb.co/bKXHTHh/al-01.webp",
+        "images": {
+          "box_one": [
+            {
+              "id": 1,
+              "url": "https://i.ibb.co/bKXHTHh/al-01.webp",
+              "alt": ""
+            },
+            {
+              "id": 2,
+              "url": "https://i.ibb.co/2h1Zt7K/summer-02.webp",
+              "alt": ""
+            },
+            {
+              "id": 3,
+              "url": "https://i.ibb.co/FDCs43b/summer-03.webp",
+              "alt": ""
+            },
+            {
+              "id": 4,
+              "url": "https://i.ibb.co/FDhMfVs/summer-04.webp",
+              "alt": ""
+            },
+            {
+              "id": 5,
+              "url": "https://i.ibb.co/5vgXsY5/summer-05.webp",
+              "alt": ""
+            },
+            {
+              "id": 11,
+              "url": "https://i.ibb.co/hK5PMqV/summer-11.webp",
+              "alt": ""
+            }
+          ],
+          "box_two": [
+            {
+              "id": 6,
+              "url": "https://i.ibb.co/MRKC3HL/summer-06.webp",
+              "alt": ""
+            },
+            {
+              "id": 7,
+              "url": "https://i.ibb.co/q1hRn9B/summer-07.webp",
+              "alt": ""
+            },
+            {
+              "id": 8,
+              "url": "https://i.ibb.co/jkDMbxP/summer-08.webp",
+              "alt": ""
+            },
+            {
+              "id": 9,
+              "url": "https://i.ibb.co/gJxTkJL/summer-09.webp",
+              "alt": ""
+            },
+            {
+              "id": 10,
+              "url": "https://i.ibb.co/P9LRpnK/summer-10.webp",
+              "alt": ""
+            }
+          ]
+        }
+      },
+      {
+        "id": 2,
+        "title": "Folkestone",
+        "slug": "folkestone",
+        "coverImg": "https://i.ibb.co/mH2S8hN/al-02.webp",
+        "images": {
+          "box_one": [
+            {
+              "id": 1,
+              "url": "https://i.ibb.co/5xRPYwV/po-01.webp",
+              "alt": ""
+            },
+            {
+              "id": 2,
+              "url": "https://i.ibb.co/M2w28DC/po-02.webp",
+              "alt": ""
+            },
+            {
+              "id": 3,
+              "url": "https://i.ibb.co/N36SgH9/po-03.webp",
+              "alt": ""
+            },
+            {
+              "id": 4,
+              "url": "https://i.ibb.co/26NTfGR/po-04.webp",
+              "alt": ""
+            },
+            {
+              "id": 5,
+              "url": "https://i.ibb.co/3z5hrGJ/po-05.webp",
+              "alt": ""
+            }
+          ],
+          "box_two": [
+            {
+              "id": 6,
+              "url": "https://i.ibb.co/TMZRgY6/po-06.webp",
+              "alt": ""
+            },
+            {
+              "id": 7,
+              "url": "https://i.ibb.co/JjCtvF0/po-07.webp",
+              "alt": ""
+            },
+            {
+              "id": 8,
+              "url": "https://i.ibb.co/9W9c5Yf/po-08.webp",
+              "alt": ""
+            },
+            {
+              "id": 9,
+              "url": "https://i.ibb.co/5YvFZCH/po-09.webp",
+              "alt": ""
+            },
+            {
+              "id": 10,
+              "url": "https://i.ibb.co/tC1Rmx6/po-10.webp",
+              "alt": ""
+            }
+          ]
+        }
+      },
+      {
+        "id": 3,
+        "title": "Journey to Macau",
+        "slug": "journey-to-macau",
+        "coverImg": "https://i.ibb.co/w0PnSxV/al-03.webp",
+        "images": {
+          "box_one": [
+            {
+              "id": 1,
+              "url": "https://i.ibb.co/7Cc5p2s/macau-01.web",
+              "alt": ""
+            },
+            {
+              "id": 2,
+              "url": "https://i.ibb.co/C6jCFQg/macau-02.webp",
+              "alt": ""
+            },
+            {
+              "id": 3,
+              "url": "https://i.ibb.co/prkBRWP/macau-03.webp",
+              "alt": ""
+            },
+            {
+              "id": 4,
+              "url": "https://i.ibb.co/f1H3WcC/macau-04.webp",
+              "alt": ""
+            },
+            {
+              "id": 5,
+              "url": "https://i.ibb.co/SKVb9yk/macau-05.webp",
+              "alt": ""
+            },
+            {
+              "id": 11,
+              "url": "https://i.ibb.co/8ghCvY3/macau-11.webp",
+              "alt": ""
+            }
+          ],
+          "box_two": [
+            {
+              "id": 6,
+              "url": "https://i.ibb.co/KWVMMYR/macau-06.webp",
+              "alt": ""
+            },
+            {
+              "id": 7,
+              "url": "https://i.ibb.co/7JNLzDM/macau-07.webp",
+              "alt": ""
+            },
+            {
+              "id": 8,
+              "url": "https://i.ibb.co/2drrhrq/macau-08.webp",
+              "alt": ""
+            },
+            {
+              "id": 9,
+              "url": "https://i.ibb.co/ww4pxFX/macau-09.webp",
+              "alt": ""
+            },
+            {
+              "id": 10,
+              "url": "https://i.ibb.co/5xXVdzF/macau-10.webp",
+              "alt": ""
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

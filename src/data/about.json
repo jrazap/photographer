@@ -1,0 +1,34 @@
+{
+  "content": {
+    "title": "Biography",
+    "text_one": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut rem pariatur corrupti praesentium earum omnis eveniet laudantium, dicta ut voluptates reiciendis accusantium, at harum ratione eaque, quo sit sequi sed nesciunt officiis! Asperiores delectus perspiciatis fuga repellat? Reiciendis, animi consequatur sed id aliquid, laborum illum nesciunt dolores quis iusto debitis, est ducimus. Excepturi, ipsam suscipit! Quaerat.",
+    "text_two": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut rem pariatur corrupti praesentium earum omnis eveniet laudantium, dicta ut voluptates reiciendis accusantium, at harum ratione eaque, quo sit sequi sed nesciunt officiis! Asperiores delectus perspiciatis fuga repellat? Reiciendis, animi consequatur sed id aliquid, laborum illum nesciunt dolores quis iusto debitis, est ducimus. Excepturi, ipsam suscipit! Quaerat.",
+    "img": "https://i.ibb.co/MMD8fMz/about.webp",
+    "clients": {
+      "title": "Selected Clients",
+      "discription": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro laudantium animi deleniti cupiditate nobis quibusdam omnis magnam ullam vel impedit. Enim incidunt repudiandae aspernatur voluptas.",
+      "pictures": [
+        {
+          "id": 1,
+          "url": "https://i.ibb.co/TbtGLXn/cli-01.webp"
+        },
+        {
+          "id": 2,
+          "url": "https://i.ibb.co/y4q4LSv/cli-02.webp"
+        },
+        {
+          "id": 3,
+          "url": "https://i.ibb.co/m6LvJdw/cli-03.webp"
+        },
+        {
+          "id": 4,
+          "url": "https://i.ibb.co/9v01G8m/cli-04.webp"
+        },
+        {
+          "id": 5,
+          "url": "https://i.ibb.co/1Jy1ZdB/cli-05.webp"
+        }
+      ]
+    }
+  }
+}

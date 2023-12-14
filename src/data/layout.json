@@ -1,0 +1,28 @@
+{
+  "header": {
+    "brandName": "CKP",
+    "navlinks": [
+      {
+        "id": 1,
+        "label": "portfolio",
+        "url": "/portfolio"
+      },
+      {
+        "id": 2,
+        "label": "about",
+        "url": "/about"
+      },
+      {
+        "id": 3,
+        "label": "albums",
+        "url": "/albums"
+      },
+      {
+        "id": 4,
+        "label": "contact",
+        "url": "/contact"
+      }
+    ]
+  },
+  "footer": {}
+}
