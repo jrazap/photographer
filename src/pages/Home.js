@@ -5,18 +5,18 @@ const Home = () => {
   return (
     <>
       <div className="home">
-        <Layout>
-          <div className="container">
+        <div className="container">
+          <Layout>
             <div
-              className="content"
+              className="home-content"
               data-aos="fade-up"
               data-aos-duration="1000"
             >
               <h1 className="name">{data.content.name}</h1>
-              <h4 className="job">{data.content.job.toUpperCase()}</h4>
+              <h4 className="job">{data.content.job}</h4>
             </div>
-          </div>
-        </Layout>
+          </Layout>
+        </div>
       </div>
     </>
   );

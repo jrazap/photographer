@@ -1,0 +1,30 @@
+@use "../abstracts/mixins" as *;
+
+// ===============================================
+// About
+// ===============================================
+.about {
+  .container {
+    .about-content {
+      margin-block: 5rem;
+      .box-container {
+        .box {
+          margin-block-end: 3rem;
+          &.bio {
+            .about_img {
+              @include size(100%, 90vh);
+            }
+          }
+          .row {
+            inline-size: 100%;
+            @include flex(center, center, row);
+          }
+          p {
+            margin-bottom: 2rem;
+            text-align: justify;
+          }
+        }
+      }
+    }
+  }
+}

@@ -25,12 +25,12 @@ const Header = () => {
           <ul id="navbar">
             {data.header.navlinks.map((link) => {
               return (
-                <li key={link.id}>
+                <li className="item" key={link.id}>
                   <Link to={link.url}>{link.label}</Link>
                 </li>
               );
             })}
-            <li>
+            <li className="item">
               <a href="https://facebook.com" className="icon">
                 <FontAwesomeIcon icon={faFacebookF} />
               </a>

@@ -4,7 +4,8 @@ import About from "./pages/About.js";
 import Albums from "./pages/Albums.js";
 import Portfolio from "./pages/Portfolio.js";
 import Contact from "./pages/Contact.js";
-import SingleAlbum from "./pages/Album.js";
+import SingleAlbum from "./pages/SingleAlbum.js";
+import SingleWork from "./pages/SingleWork.js";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: "/portfolio",
     element: <Portfolio />,
+  },
+  {
+    path: "/portfolio/:workSlug",
+    element: <SingleWork />,
   },
   {
     path: "/about",
@@ -32,7 +37,6 @@ const router = createBrowserRouter([
     path: "/contact",
     element: <Contact />,
   },
-
 ]);
 
 export default router;

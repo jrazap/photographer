@@ -1,34 +1,40 @@
 import Layout from "../layout/layout";
+import data from "../data/portfolio.json";
+import { Link } from "react-router-dom";
 
 const Portfolio = () => {
   return (
-    <Layout>
-      <div className="portfolio-content">
-        <h1 className="title" data-aos="fade-up" data-aos-duration="1000">
-          Recent Works
-        </h1>
-        <div className="box-container">
-          <div className="box" data-aos="fade-in" data-aos-duration="2000">
-            <a href="./portraits.html">
-              <img src="../img/p1.webp" alt="" />
-              <h3>Portraits</h3>
-            </a>
+    <div className="portfolio">
+      <div className="container">
+        <Layout>
+          <div className="content">
+            <h1 className="title" data-aos="fade-up" data-aos-duration="1000">
+              {data.content.title}
+            </h1>
+            <div className="box-container">
+              <div className="row">
+                {data.content.works.map((work) => {
+                  return (
+                    <Link
+                      to={work.slug}
+                      className="box col-lg-4 col-md-6"
+                      data-aos="fade-in"
+                      data-aos-duration="2000"
+                      key={work.id}
+                    >
+                      <img src={work.coverImg} alt="" />
+                      <div className="overlay">
+                        <h3>{work.title}</h3>
+                      </div>
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
           </div>
-          <div className="box" data-aos="fade-in" data-aos-duration="2000">
-            <a href="./places.html">
-              <img src="../img/p2.webp" alt="" />
-              <h3>Places</h3>
-            </a>
-          </div>
-          <div className="box" data-aos="fade-in" data-aos-duration="2000">
-            <a href="./fashion.html">
-              <img src="../img/p3.webp" alt="" />
-              <h3>Fashion</h3>
-            </a>
-          </div>
-        </div>
+        </Layout>
       </div>
-    </Layout>
+    </div>
   );
 };
 

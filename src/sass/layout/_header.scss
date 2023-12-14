@@ -1,0 +1,35 @@
+header {
+  .row {
+    @include flex(space-between, center, row);
+    inline-size: 100%;
+    padding-block: 1rem;
+
+    .brand {
+      @include size(fit-content, auto);
+      @include font(600, 2rem, $white);
+    }
+    #menu-bar {
+      display: none;
+    }
+    #navbar {
+      margin: 0 !important;
+      inline-size: fit-content !important;
+
+      .item {
+        display: inline-block;
+        margin-right: 3rem;
+        a {
+          color: #fff;
+          text-transform: capitalize;
+        }
+        .icon {
+          margin-inline-start: 1rem;
+
+          &:hover {
+            color: rgba(242, 213, 160);
+          }
+        }
+      }
+    }
+  }
+}

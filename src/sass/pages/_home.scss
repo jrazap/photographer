@@ -1,0 +1,22 @@
+@use "../abstracts/mixins" as *;
+
+// ===============================================
+// Home
+// ===============================================
+.home {
+  min-block-size: 100vh;
+  background: url(../img/bg.webp) no-repeat center;
+  background-size: cover;
+  .home-content {
+    @include flex(center, flex-start, column);
+    min-block-size: 78vh;
+    .name {
+      @include font(400, 3.5rem, $white);
+    }
+    .job {
+      @include font(100, 1.375rem, $white);
+      text-transform: uppercase;
+      letter-spacing: 0.6em;
+    }
+  }
+}

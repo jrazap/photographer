@@ -1,0 +1,61 @@
+@use "./mixins" as *;
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+
+// ===============================================
+// Global
+// ===============================================
+::selection {
+  background: $ripeMango;
+  color: $darkCharcoal;
+}
+
+::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  @include none;
+}
+
+body {
+  font-family: "helvetica-w01-roman", "helvetica-w02-roman",
+    "helvetica-lt-w10-roman", sans-serif;
+  color: #fff;
+  background-color: $black;
+}
+title {
+  text-transform: capitalize;
+}
+
+html {
+  overflow-y: scroll !important;
+}
+
+.title {
+  margin-block-end: 1.5rem;
+  font-size: 60px;
+  font-weight: 400;
+}
+p {
+  line-height: 1.5em;
+  font-size: 16px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.content {
+  min-block-size: calc(100vh - 10rem);
+  margin-block: 5rem;
+}

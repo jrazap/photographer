@@ -1,0 +1,25 @@
+@use "../abstracts/mixins" as *;
+
+// ===============================================
+// Contact
+// ===============================================
+.contact {
+  .container {
+    .contact-content {
+      min-block-size: 80vh;
+      .box-container {
+        .row {
+          .box {
+            p {
+              margin-block-end: 1.5rem;
+              a {
+                text-decoration: underline;
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

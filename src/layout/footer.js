@@ -1,9 +1,13 @@
 const Footer = () => {
   return (
-    <p>
-      &copy; {new Date().getFullYear()} | Proudly created with{" "}
-      <a href="https://jrazap.com">Mohamed Elazap</a>
-    </p>
+    <footer>
+      <div className="container">
+        <p>
+          <span>&copy; {new Date().getFullYear()} | Proudly created with</span>{" "}
+          <a href="https://jrazap.com">Mohamed Elazap</a>
+        </p>
+      </div>
+    </footer>
   );
 };
 

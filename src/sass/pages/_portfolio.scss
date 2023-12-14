@@ -1,0 +1,42 @@
+@use "../abstracts/mixins" as *;
+
+// ===============================================
+// Portfolio
+// ===============================================
+.portfolio,.albums {
+  .container {
+    .box-container {
+      .row {
+        .box {
+          position: relative;
+          overflow: hidden;
+          block-size: 70vh;
+          img {
+            @include size(100%, 100%);
+            object-fit: cover;
+          }
+          .overlay {
+            position: absolute;
+            top: 0;
+            @include flex(center, center, row);
+            @include size(100%, 100%);
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 5;
+            h3 {
+              @include font(300, 2rem, $white);
+            }
+          }
+          &:hover {
+            img {
+              transform: scale(1.2);
+              transition: all 1s linear;
+            }
+            .overlay {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

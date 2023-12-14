@@ -5,13 +5,9 @@ import Footer from "./footer";
 const Layout = ({ children }) => {
   return (
     <React.Fragment>
-      <header id="header-demo">
-        <Header />
-      </header>
+      <Header />
       {children}
-      <footer id="footer-demo">
-        <Footer />
-      </footer>
+      <Footer />
     </React.Fragment>
   );
 };
