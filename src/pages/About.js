@@ -35,30 +35,25 @@ const About = () => {
                   </div>
                 </div>
               </div>
-              <div className="box">
+              <div className="box cli">
                 <div className="row">
-                  <div
-                    className="item col-md-6"
+                  <div className="item col-md-6"
                     data-aos="fade-right"
                     data-aos-duration="2000"
                   >
                     <h1 className="title">{data.content.clients.title}</h1>
                     <p>{data.content.clients.discription}</p>
                   </div>
-                  <div
-                    className="item cli col-md-6"
+                  <div className="item col-md-6"
                     data-aos="fade-left"
                     data-aos-duration="2000"
                   >
                     <div className="row">
                       {data.content.clients.pictures.map((pic) => {
                         return (
-                          <img
-                            key={pic.id}
-                            className="col-4"
-                            src={pic.url}
-                            alt=""
-                          />
+                          <div className="image col-md-4 col-6" key={pic.id}>
+                            <img src={pic.url} alt="" />
+                          </div>
                         );
                       })}
                     </div>

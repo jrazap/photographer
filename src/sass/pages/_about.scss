@@ -10,14 +10,25 @@
       .box-container {
         .box {
           margin-block-end: 3rem;
-          &.bio {
-            .about_img {
-              @include size(100%, 90vh);
-            }
-          }
           .row {
             inline-size: 100%;
             @include flex(center, center, row);
+          }
+          &.bio {
+            .about_img {
+              @include size(100%, 90vh);
+              @include media(sm) {
+                block-size: 50vh;
+              }
+            }
+          }
+          &.cli {
+            .image {
+              img {
+                @include size(100%, 100%);
+                object-fit: contain;
+              }
+            }
           }
           p {
             margin-bottom: 2rem;

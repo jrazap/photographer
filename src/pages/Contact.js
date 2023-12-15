@@ -22,39 +22,50 @@ const Contact = () => {
                   </p>
                   <p>Phone: 123-456-7890</p>
                 </div>
+
                 <div
                   className="box col-md-6 form"
                   data-aos="fade-left"
                   data-aos-duration="2000"
                 >
-                  <div className="tab">
-                    <div>
-                      <label for="firstName">First Name</label>
-                      <input type="text" name="firstName" id="first-name" />
+                  <div className="row">
+                    <div className="col-md-6">
+                      <div className="form-group">
+                        <label>First Name</label>
+                        <input type="text" name="firstName" id="first-name" />
+                      </div>
                     </div>
-                    <div>
-                      <label for="lastName">Last Name</label>
-                      <input type="text" name="lastName" id="last-name" />
+                    <div className="col-md-6">
+                      <div className="form-group">
+                        <label>Last Name</label>
+                        <input type="text" name="lastName" id="last-name" />
+                      </div>
+                    </div>
+                    <div className="col-md-6">
+                      <div className="form-group">
+                        <label>Email</label>
+                        <input type="email" name="email" id="email" />
+                      </div>
+                    </div>
+                    <div className="col-md-6">
+                      <div className="form-group">
+                        <label>Phone</label>
+                        <input type="tel" name="phone" id="phone" />
+                      </div>
+                    </div>
+                    <div className="col-md-12">
+                      <div className="form-group">
+                        <label>Leave us a message...</label>
+                        <textarea
+                          name="message"
+                          id="message"
+                          cols="30"
+                          rows="7"
+                        ></textarea>
+                      </div>
                     </div>
                   </div>
-                  <div className="tab">
-                    <div>
-                      <label for="email">Email</label>
-                      <input type="email" name="email" id="email" />
-                    </div>
-                    <div>
-                      <label for="phone">Phone</label>
-                      <input type="tel" name="phone" id="phone" />
-                    </div>
-                  </div>
-                  <label for="message">Leave us a message...</label>
-                  <textarea
-                    name="message"
-                    id="message"
-                    cols="30"
-                    rows="7"
-                  ></textarea>
-                  <button>Submit</button>
+                  <button className="submit-btn">Submit</button>
                 </div>
               </div>
             </div>

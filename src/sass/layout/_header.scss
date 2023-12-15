@@ -1,35 +1,96 @@
+$headerHeight: 80px;
 header {
-  .row {
-    @include flex(space-between, center, row);
-    inline-size: 100%;
-    padding-block: 1rem;
-
-    .brand {
-      @include size(fit-content, auto);
-      @include font(600, 2rem, $white);
+  @include flex(center, center, row);
+  block-size: $headerHeight;
+  .container {
+    padding-inline: 0;
+    @include media(sm) {
     }
-    #menu-bar {
-      display: none;
-    }
-    #navbar {
-      margin: 0 !important;
-      inline-size: fit-content !important;
+    .row {
+      @include flex(space-between, center, row);
+      inline-size: 100%;
+      margin: 0;
+      @include media(md) {
+        @include flex(center, center, column);
+        column-gap: 1.5rem;
+      }
+      @include media(sm) {
+        @include flex(space-between, center, row);
+      }
 
-      .item {
-        display: inline-block;
-        margin-right: 3rem;
-        a {
-          color: #fff;
-          text-transform: capitalize;
+      .brand {
+        @include size(fit-content, auto);
+        @include font(600, 2rem, $white);
+      }
+      #menu-bar {
+        @include font(400, 3rem, $white);
+        inline-size: auto;
+        cursor: pointer;
+        display: none;
+
+        @include media(sm) {
+          display: block;
         }
-        .icon {
-          margin-inline-start: 1rem;
+      }
+      #navbar {
+        margin: 0 !important;
+        inline-size: fit-content;
+        transition: all 0.5s ease-in;
+        z-index: 110;
 
-          &:hover {
-            color: rgba(242, 213, 160);
+        .item {
+          display: inline-block;
+          &:not(:last-of-type) {
+            margin-inline-end: 3rem;
+          }
+          @include media(sm) {
+            padding-inline-start: 1rem;
+            padding-block: 0.5rem;
+            margin-block-end: 1.5rem;
+            display: block;
+            border-left: 0.3rem solid $white;
+            inline-size: 100%;
+          }
+          a {
+            color: $white;
+            text-transform: capitalize;
+            @include media(sm) {
+              @include font(600, 1rem, $white);
+              letter-spacing: 1px;
+            }
+          }
+          .icon {
+            &:first-child {
+              margin-inline-end: 1rem;
+            }
+
+            &:hover {
+              color: rgba(242, 213, 160);
+            }
+          }
+        }
+        @include media(sm) {
+          position: absolute;
+          inset-block-start: $headerHeight;
+          inline-size: 100%;
+          border-radius: 0 0 1rem 1rem;
+          padding-block-start: 1.5rem;
+          background-color: rgb(0, 0, 0, 0.7);
+          // clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+          display: none;
+          &.active {
+            display: block;
+            transition: display 0.5s ease;
+            // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
           }
         }
       }
     }
+  }
+  @include media(md) {
+    block-size: auto;
+  }
+  @include media(sm) {
+    position: relative;
   }
 }

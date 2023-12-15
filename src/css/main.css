@@ -38,6 +38,7 @@ html {
 }
 
 p {
+  margin: 0;
   line-height: 1.5em;
   font-size: 16px;
 }
@@ -58,41 +59,125 @@ a {
   margin-block: 5rem;
 }
 
-header .row {
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  block-size: 80px;
+}
+header .container {
+  padding-inline: 0;
+}
+header .container .row {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
   inline-size: 100%;
-  padding-block: 1rem;
+  margin: 0;
 }
-header .row .brand {
+@media (max-width: 991px) {
+  header .container .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    column-gap: 1.5rem;
+  }
+}
+@media (max-width: 767px) {
+  header .container .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+header .container .row .brand {
   inline-size: fit-content;
   block-size: auto;
   font-weight: 600;
   font-size: 2rem;
   color: #FFFFFF;
 }
-header .row #menu-bar {
+header .container .row #menu-bar {
+  font-weight: 400;
+  font-size: 3rem;
+  color: #FFFFFF;
+  inline-size: auto;
+  cursor: pointer;
   display: none;
 }
-header .row #navbar {
+@media (max-width: 767px) {
+  header .container .row #menu-bar {
+    display: block;
+  }
+}
+header .container .row #navbar {
   margin: 0 !important;
-  inline-size: fit-content !important;
+  inline-size: fit-content;
+  transition: all 0.5s ease-in;
+  z-index: 110;
 }
-header .row #navbar .item {
+header .container .row #navbar .item {
   display: inline-block;
-  margin-right: 3rem;
 }
-header .row #navbar .item a {
-  color: #fff;
+header .container .row #navbar .item:not(:last-of-type) {
+  margin-inline-end: 3rem;
+}
+@media (max-width: 767px) {
+  header .container .row #navbar .item {
+    padding-inline-start: 1rem;
+    padding-block: 0.5rem;
+    margin-block-end: 1.5rem;
+    display: block;
+    border-left: 0.3rem solid #FFFFFF;
+    inline-size: 100%;
+  }
+}
+header .container .row #navbar .item a {
+  color: #FFFFFF;
   text-transform: capitalize;
 }
-header .row #navbar .item .icon {
-  margin-inline-start: 1rem;
+@media (max-width: 767px) {
+  header .container .row #navbar .item a {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+  }
 }
-header .row #navbar .item .icon:hover {
+header .container .row #navbar .item .icon:first-child {
+  margin-inline-end: 1rem;
+}
+header .container .row #navbar .item .icon:hover {
   color: rgb(242, 213, 160);
+}
+@media (max-width: 767px) {
+  header .container .row #navbar {
+    position: absolute;
+    inset-block-start: 80px;
+    inline-size: 100%;
+    border-radius: 0 0 1rem 1rem;
+    padding-block-start: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+  }
+  header .container .row #navbar.active {
+    display: block;
+    transition: display 0.5s ease;
+  }
+}
+@media (max-width: 991px) {
+  header {
+    block-size: auto;
+  }
+}
+@media (max-width: 767px) {
+  header {
+    position: relative;
+  }
 }
 
 .home {
@@ -119,6 +204,11 @@ header .row #navbar .item .icon:hover {
   text-transform: uppercase;
   letter-spacing: 0.6em;
 }
+@media (max-width: 767px) {
+  .home .home-content .job {
+    font-size: 1rem;
+  }
+}
 
 .about .container .about-content {
   margin-block: 5rem;
@@ -126,16 +216,26 @@ header .row #navbar .item .icon:hover {
 .about .container .about-content .box-container .box {
   margin-block-end: 3rem;
 }
-.about .container .about-content .box-container .box.bio .about_img {
-  inline-size: 100%;
-  block-size: 90vh;
-}
 .about .container .about-content .box-container .box .row {
   inline-size: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+}
+.about .container .about-content .box-container .box.bio .about_img {
+  inline-size: 100%;
+  block-size: 90vh;
+}
+@media (max-width: 767px) {
+  .about .container .about-content .box-container .box.bio .about_img {
+    block-size: 50vh;
+  }
+}
+.about .container .about-content .box-container .box.cli .image img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: contain;
 }
 .about .container .about-content .box-container .box p {
   margin-bottom: 2rem;
@@ -146,6 +246,11 @@ header .row #navbar .item .icon:hover {
   position: relative;
   overflow: hidden;
   block-size: 70vh;
+}
+@media (max-width: 991px) {
+  .portfolio .container .box-container .row .box, .albums .container .box-container .row .box {
+    margin-block-end: 1.5rem;
+  }
 }
 .portfolio .container .box-container .row .box img, .albums .container .box-container .row .box img {
   inline-size: 100%;
@@ -190,7 +295,42 @@ header .row #navbar .item .icon:hover {
 }
 .contact .container .contact-content .box-container .row .box p a {
   text-decoration: underline;
-  color: #fff;
+  color: #FFFFFF;
+}
+.contact .container .contact-content .box-container .row .box.form .row .form-group {
+  margin-block-end: 1.5rem;
+}
+.contact .container .contact-content .box-container .row .box.form .row .form-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 0.5rem;
+}
+.contact .container .contact-content .box-container .row .box.form .row .form-group input,
+.contact .container .contact-content .box-container .row .box.form .row .form-group textarea {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: #FFFFFF;
+  background-color: #000000;
+  border-bottom: 2px solid #FFFFFF;
+  inline-size: 100%;
+}
+.contact .container .contact-content .box-container .row .box.form .submit-btn {
+  display: block;
+  color: #FFFFFF;
+  background-color: #000000;
+  border: 1px solid #FFFFFF;
+  padding: 0.6rem 2.5rem;
+  margin-top: 1rem;
+  font-weight: 200;
+  cursor: pointer;
+}
+.contact .container .contact-content .box-container .row .box.form .submit-btn:hover {
+  color: #000000;
+  background-color: #FFFFFF;
+  transition: all 0.2s ease-in-out;
 }
 
 footer {
@@ -200,6 +340,11 @@ footer p {
   font-weight: 300;
   font-size: 1rem;
   color: #FFFFFF;
+}
+@media (max-width: 767px) {
+  footer p {
+    font-size: 0.75rem;
+  }
 }
 footer p a {
   color: #FFFFFF;

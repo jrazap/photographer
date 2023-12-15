@@ -7,10 +7,16 @@ import { useEffect } from "react";
 
 const Header = () => {
   useEffect(() => {
-    $("#menu-bar").onclick = () => {
-      $("#menu-bar").toggleClass("fa-times");
+    let menubar = $("#menu-bar");
+    menubar.on("click", () => {
       $("#navbar").toggleClass("active");
-    };
+      menubar.toggleClass("active");
+      if (menubar.hasClass("active")) {
+        menubar.text("×");
+      } else {
+        menubar.text("=");
+      }
+    });
   }, []);
 
   return (
@@ -20,7 +26,7 @@ const Header = () => {
           <Link to="/" className="brand">
             {data.header.brandName}
           </Link>
-          {/* <FontAwesomeIcon icon={faBars} id="menu-bar" /> */}
+          <span id="menu-bar">=</span>
 
           <ul id="navbar">
             {data.header.navlinks.map((link) => {
