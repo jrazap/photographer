@@ -14,6 +14,11 @@ const router = createBrowserRouter([
     // errorElement: <ErrorPage RequestNumber="404" RequestTitle="Not Found" />,
   },
   {
+    path: "/photographer",
+    element: <Home />,
+    // errorElement: <ErrorPage RequestNumber="404" RequestTitle="Not Found" />,
+  },
+  {
     path: "/portfolio",
     element: <Portfolio />,
   },
