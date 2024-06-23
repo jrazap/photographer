@@ -1,11 +1,13 @@
 import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import $ from "jquery";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import data from "../data/layout.json";
 import { useEffect } from "react";
 
 const Header = () => {
+  const { pathname } = useLocation();
+
   useEffect(() => {
     let menubar = $("#menu-bar");
     menubar.on("click", () => {
@@ -17,10 +19,10 @@ const Header = () => {
         menubar.text("=");
       }
     });
-  }, []);
+  });
 
   return (
-    <header>
+    <header className={pathname === "/" ? "home-header" : ""}>
       <div className="container">
         <div className="row">
           <Link to="/" className="brand">

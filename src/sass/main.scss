@@ -2,9 +2,10 @@
 @import './abstracts/variables';
 @import './abstracts/global.scss';
 @import './layout/header';
+@import './layout/footer';
 @import './pages/home';
 @import './pages/about';
 @import './pages/portfolio';
 @import './pages/album';
 @import './pages/contact';
-@import './layout/footer';
+@import './pages/notfound';

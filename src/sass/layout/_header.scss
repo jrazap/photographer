@@ -2,10 +2,15 @@ $headerHeight: 80px;
 header {
   @include flex(center, center, row);
   block-size: $headerHeight;
+
+  &.home-header {
+    position: absolute;
+    inline-size: 100%;
+    top: 0;
+  }
   .container {
     padding-inline: 0;
-    @include media(sm) {
-    }
+
     .row {
       @include flex(space-between, center, row);
       inline-size: 100%;
@@ -87,9 +92,11 @@ header {
       }
     }
   }
+
   @include media(md) {
     block-size: auto;
   }
+
   @include media(sm) {
     position: relative;
   }

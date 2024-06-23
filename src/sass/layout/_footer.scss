@@ -1,12 +1,19 @@
 // ===============================================
 // Footer
 // ===============================================
+$footerHeight: 48px;
+
 footer {
-  padding-block: 1rem;
+  @include size(100%, $footerHeight);
+  @include flex(center, center, row);
+  &.home-footer {
+    position: absolute;
+    bottom: 0;
+  }
   p {
     @include font(300, 1rem, $white);
-    @include media(sm){
-      font-size: .75rem;
+    @include media(sm) {
+      font-size: 0.75rem;
     }
     a {
       color: $white;

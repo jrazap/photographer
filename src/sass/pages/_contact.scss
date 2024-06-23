@@ -36,21 +36,6 @@
                   }
                 }
               }
-              .submit-btn {
-                display: block;
-                color: $white;
-                background-color: $black;
-                border: 1px solid $white;
-                padding: 0.6rem 2.5rem;
-                margin-top: 1rem;
-                font-weight: 200;
-                cursor: pointer;
-                &:hover {
-                  color: $black;
-                  background-color: $white;
-                  transition: all 0.2s ease-in-out;
-                }
-              }
             }
           }
         }

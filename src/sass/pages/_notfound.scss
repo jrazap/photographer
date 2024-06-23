@@ -1,0 +1,17 @@
+.error-page {
+  min-block-size: calc(100vh - $headerHeight - $footerHeight);
+  @include flex(center, center, row);
+  inline-size: 100%;
+  .container {
+    .number {
+      @include font(700, 5rem, $white);
+    }
+    .status {
+      @include font(500, 2rem, $white);
+    }
+    .btn {
+      inline-size: fit-content;
+      margin-block-start: 1.5rem;
+    }
+  }
+}

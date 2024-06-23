@@ -1,6 +1,9 @@
+import { useLocation } from "react-router-dom";
+
 const Footer = () => {
+  const { pathname } = useLocation();
   return (
-    <footer>
+    <footer className={pathname === "/" ? "home-footer" : ""}>
       <div className="container">
         <p>
           <span>&copy; {new Date().getFullYear()} | Proudly created with</span>{" "}
