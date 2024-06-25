@@ -28,7 +28,7 @@ const Portfolio = () => {
                     >
                       <img src={work.coverImg} alt="" />
                       <div className="overlay">
-                        <h3>{work.title}</h3>
+                        <p className="title">{work.title}</p>
                       </div>
                     </Link>
                   );

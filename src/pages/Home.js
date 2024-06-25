@@ -16,7 +16,7 @@ const Home = () => {
             data-aos-duration="1000"
           >
             <h1 className="name">{data.content.name}</h1>
-            <h4 className="job">{data.content.job}</h4>
+            <p className="job">{data.content.job}</p>
           </div>
         </div>
       </div>

@@ -28,7 +28,7 @@ const Albums = () => {
                     >
                       <img src={album.coverImg} alt="" />
                       <div className="overlay">
-                        <h3>{album.title}</h3>
+                        <p className="title">{album.title}</p>
                       </div>
                     </Link>
                   );

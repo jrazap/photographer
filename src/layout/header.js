@@ -39,10 +39,10 @@ const Header = () => {
               );
             })}
             <li className="item">
-              <a href="https://facebook.com" className="icon">
+              <a aria-label="facebook" href="https://facebook.com" className="icon">
                 <FontAwesomeIcon icon={faFacebookF} />
               </a>
-              <a href="https://instagram.com" className="icon">
+              <a aria-label="instagram" href="https://instagram.com" className="icon">
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
             </li>

@@ -25,7 +25,7 @@
             @include size(100%, 100%);
             background-color: rgba(0, 0, 0, 0.6);
             z-index: 5;
-            h3 {
+            .title {
               @include font(300, 2rem, $white);
             }
           }

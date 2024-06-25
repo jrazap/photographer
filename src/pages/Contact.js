@@ -22,7 +22,10 @@ const Contact = () => {
                 >
                   <p>Charley Knox Is Represented by United Creatives</p>
                   <p>
-                    Mail: <a href="mailto:info@mysite.com">info@mysite.com</a>
+                    Mail:
+                    <a aria-label="mail" href="mailto:info@mysite.com">
+                      info@mysite.com
+                    </a>
                   </p>
                   <p>Phone: 123-456-7890</p>
                 </div>

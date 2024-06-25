@@ -16,6 +16,7 @@
           }
           &.bio {
             .about_img {
+              aspect-ratio: auto;
               @include size(100%, 90vh);
               @include media(sm) {
                 block-size: 50vh;

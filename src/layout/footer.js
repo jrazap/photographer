@@ -7,7 +7,9 @@ const Footer = () => {
       <div className="container">
         <p>
           <span>&copy; {new Date().getFullYear()} | Proudly created with</span>{" "}
-          <a href="https://jrazap.com">Mohamed Elazap</a>
+          <a aria-label="jrazap" href="https://jrazap.com">
+            Mohamed Elazap
+          </a>
         </p>
       </div>
     </footer>
