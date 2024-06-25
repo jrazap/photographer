@@ -1,5 +1,5 @@
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Helmet } from "react-helmet";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import data from "../data/about.json";
 
 const About = () => {
@@ -35,6 +35,8 @@ const About = () => {
                       src={data.content.img}
                       alt=""
                       className="about_img"
+                      width="100%"
+                      height="auto"
                     />
                   </div>
                 </div>
@@ -58,7 +60,7 @@ const About = () => {
                       {data.content.clients.pictures.map((pic) => {
                         return (
                           <div className="image col-md-4 col-6" key={pic.id}>
-                            <img src={pic.url} alt="" />
+                            <LazyLoadImage src={pic.url} alt="" />
                           </div>
                         );
                       })}

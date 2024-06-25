@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import data from "../data/portfolio.json";
 
 const SingleWork = () => {
@@ -26,12 +27,14 @@ const SingleWork = () => {
                 <div className="box col-md-6">
                   {work.images.box_one.map((pic) => {
                     return (
-                      <img
+                      <LazyLoadImage
+                        key={pic.id}
                         src={pic.url}
                         alt={pic.alt}
+                        width="100%"
+                        height="auto"
                         data-aos="fade-in"
                         data-aos-duration="2000"
-                        key={pic.id}
                       />
                     );
                   })}
@@ -39,12 +42,14 @@ const SingleWork = () => {
                 <div className="box col-md-6">
                   {work.images.box_two.map((pic) => {
                     return (
-                      <img
+                      <LazyLoadImage
+                        key={pic.id}
                         src={pic.url}
                         alt={pic.alt}
+                        width="100%"
+                        height="auto"
                         data-aos="fade-in"
                         data-aos-duration="2000"
-                        key={pic.id}
                       />
                     );
                   })}

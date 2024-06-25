@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
-import data from "../data/albums.json";
 import { Helmet } from "react-helmet";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import data from "../data/albums.json";
 
 const SingleAlbum = () => {
   const { albumSlug } = useParams();
@@ -26,12 +27,14 @@ const SingleAlbum = () => {
                 <div className="box col-md-6">
                   {album.images.box_one.map((pic) => {
                     return (
-                      <img
+                      <LazyLoadImage
+                        key={pic.id}
                         src={pic.url}
                         alt={pic.alt}
+                        width="100%"
+                        height="auto"
                         data-aos="fade-in"
                         data-aos-duration="2000"
-                        key={pic.id}
                       />
                     );
                   })}
@@ -39,12 +42,14 @@ const SingleAlbum = () => {
                 <div className="box col-md-6">
                   {album.images.box_two.map((pic) => {
                     return (
-                      <img
+                      <LazyLoadImage
+                        key={pic.id}
                         src={pic.url}
                         alt={pic.alt}
+                        width="100%"
+                        height="auto"
                         data-aos="fade-in"
                         data-aos-duration="2000"
-                        key={pic.id}
                       />
                     );
                   })}

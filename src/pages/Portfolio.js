@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import data from "../data/portfolio.json";
 import { Helmet } from "react-helmet";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import data from "../data/portfolio.json";
 
 const Portfolio = () => {
   return (
@@ -26,7 +27,7 @@ const Portfolio = () => {
                       data-aos-duration="2000"
                       key={work.id}
                     >
-                      <img src={work.coverImg} alt="" />
+                      <LazyLoadImage src={work.coverImg} alt="" />
                       <div className="overlay">
                         <p className="title">{work.title}</p>
                       </div>

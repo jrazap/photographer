@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import data from "../data/albums.json";
 
 const Albums = () => {
@@ -26,7 +27,7 @@ const Albums = () => {
                       data-aos-duration="2000"
                       key={album.id}
                     >
-                      <img src={album.coverImg} alt="" />
+                      <LazyLoadImage src={album.coverImg} alt="" />
                       <div className="overlay">
                         <p className="title">{album.title}</p>
                       </div>
