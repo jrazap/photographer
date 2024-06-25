@@ -27,7 +27,12 @@ const Albums = () => {
                       data-aos-duration="2000"
                       key={album.id}
                     >
-                      <LazyLoadImage src={album.coverImg} alt="" />
+                      <LazyLoadImage
+                        src={album.coverImg}
+                        width="100%"
+                        height="auto"
+                        alt=""
+                      />
                       <div className="overlay">
                         <p className="title">{album.title}</p>
                       </div>

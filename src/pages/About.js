@@ -60,7 +60,12 @@ const About = () => {
                       {data.content.clients.pictures.map((pic) => {
                         return (
                           <div className="image col-md-4 col-6" key={pic.id}>
-                            <LazyLoadImage src={pic.url} alt="" />
+                            <LazyLoadImage
+                              src={pic.url}
+                              width="100%"
+                              height="auto"
+                              alt=""
+                            />
                           </div>
                         );
                       })}

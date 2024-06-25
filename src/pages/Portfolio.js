@@ -27,7 +27,12 @@ const Portfolio = () => {
                       data-aos-duration="2000"
                       key={work.id}
                     >
-                      <LazyLoadImage src={work.coverImg} alt="" />
+                      <LazyLoadImage
+                        src={work.coverImg}
+                        width="100%"
+                        height="auto"
+                        alt=""
+                      />
                       <div className="overlay">
                         <p className="title">{work.title}</p>
                       </div>
